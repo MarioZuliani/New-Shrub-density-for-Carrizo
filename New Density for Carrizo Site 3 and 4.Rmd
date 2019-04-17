@@ -9,14 +9,20 @@ library(tidyr)
 library(ggplot2)
 library(dplyr)
 library(leaflet)
+library(markdown)
+library(knitr)
 ```
 
 ```{r}
-read_csv("site3_20m.csv")
-read_csv("site3_30m.csv")
+site3_20m <- read.csv("site3_20m.csv")
+site3_30m <- read.csv("site3_30m.csv")
+site3_40m <- read.csv("site3_40m.csv")
+site3_50m <- read.csv("site3_50m.csv")
+site4_20m <- read.csv("site4_20m.csv")
+site4_30m <- read.csv("site4_30m.csv")
+site4_40m <- read.csv("site4_40m.csv")
+site4_50m <- read.csv("site4_50m.csv")
 ```
-
-
 ```{r}
 shrub3_20m_box <- ggplot(data = site3_20m, aes(x = FID, y = shrub_cov)) +
   geom_boxplot() + labs(title = "site 3 20m")
